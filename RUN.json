@@ -1,0 +1,14 @@
+{
+  "runcontract": 1,
+  "services": [
+    {
+      "name": "app",
+      "dir": ".",
+      "stack": "python",
+      "kind": "cli",
+      "install": [["${python}", "-m", "pip", "install", "-q", "-e", "."]],
+      "start": ["${python}", "-m", "csvstat", "--help"],
+      "test": [["${python}", "-m", "pytest"]]
+    }
+  ]
+}
